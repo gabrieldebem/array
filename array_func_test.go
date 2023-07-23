@@ -45,7 +45,7 @@ func TestMapWithInt(t *testing.T) {
 	}
 }
 
-func TestMapceWithString(t *testing.T) {
+func TestMapWithString(t *testing.T) {
 	words := []string{"gopher", "monkey", "robot", "ninja"}
 	mapped := arrays.Map[string, string](words, func(s string) string {
 		return s + "!"
@@ -62,7 +62,7 @@ func TestMapceWithString(t *testing.T) {
 	}
 }
 
-func TestReduceceWithInt(t *testing.T) {
+func TestReduceWithInt(t *testing.T) {
 	numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
 	reduced := arrays.Reduce[int](numbers, func(a, b int) int {
 		return a + b
@@ -73,7 +73,7 @@ func TestReduceceWithInt(t *testing.T) {
 	}
 }
 
-func TestReduceceWithString(t *testing.T) {
+func TestReduceWithString(t *testing.T) {
 	words := []string{"gopher", "monkey", "robot", "ninja"}
 	reduced := arrays.Reduce[string](words, func(a, b string) string {
 		return a + " " + b
