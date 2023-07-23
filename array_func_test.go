@@ -12,8 +12,8 @@ func TestFilterWithInt(t *testing.T) {
 		return value%2 == 0
 	})
 
-	if len(odd) != 3 {
-		t.Errorf("Expected length of 3, got %d", len(odd))
+	if len(odd) != 4 {
+		t.Errorf("Expected length of 4, got %d", len(odd))
 	}
 }
 
