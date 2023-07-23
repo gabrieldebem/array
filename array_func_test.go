@@ -8,8 +8,8 @@ import (
 
 func TestFilterWithInt(t *testing.T) {
 	numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
-	odd := array.Filter[int](numbers, func(n int) bool {
-		return n%2 == 0
+	odd := array.Filter[int](numbers, func(value int) bool {
+		return value % 2 == 0
 	})
 
 	if len(odd) != 4 {
@@ -19,8 +19,8 @@ func TestFilterWithInt(t *testing.T) {
 
 func TestFilterWithString(t *testing.T) {
 	words := []string{"gopher", "monkey", "robot", "ninja"}
-	filtered := array.Filter[string](words, func(s string) bool {
-		return len(s) > 5
+	filtered := array.Filter[string](words, func(value string) bool {
+		return len(value) > 5
 	})
 
 	if len(filtered) != 2 {
@@ -30,8 +30,8 @@ func TestFilterWithString(t *testing.T) {
 
 func TestMapWithInt(t *testing.T) {
 	numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
-	mapped := array.Map[int, int](numbers, func(n int) int {
-		return n * 2
+	mapped := array.Map[int, int](numbers, func(value int) int {
+		return value * 2
 	})
 
 	if len(mapped) != 9 {
@@ -47,8 +47,8 @@ func TestMapWithInt(t *testing.T) {
 
 func TestMapWithString(t *testing.T) {
 	words := []string{"gopher", "monkey", "robot", "ninja"}
-	mapped := array.Map[string, string](words, func(s string) string {
-		return s + "!"
+	mapped := array.Map[string, string](words, func(value string) string {
+		return value + "!"
 	})
 
 	if len(mapped) != 4 {
@@ -64,8 +64,8 @@ func TestMapWithString(t *testing.T) {
 
 func TestReduceWithInt(t *testing.T) {
 	numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
-	reduced := array.Reduce[int](numbers, func(a, b int) int {
-		return a + b
+	reduced := array.Reduce[int](numbers, func(carry, value int) int {
+		return carry + value
 	})
 
 	if reduced != 45 {
@@ -75,8 +75,8 @@ func TestReduceWithInt(t *testing.T) {
 
 func TestReduceWithString(t *testing.T) {
 	words := []string{"gopher", "monkey", "robot", "ninja"}
-	reduced := array.Reduce[string](words, func(a, b string) string {
-		return a + " " + b
+	reduced := array.Reduce[string](words, func(carry, value string) string {
+		return carry + " " + value
 	})
 
 	if reduced != "gopher monkey robot ninja" {
