@@ -49,7 +49,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## Look all this badges   \o/
 
-<iframe src="https://giphy.com/embed/75ZaxapnyMp2w" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/75ZaxapnyMp2w"></a></p>
+<iframe src="https://giphy.com/embed/75ZaxapnyMp2w" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 <img src="https://shields.io/github/go-mod/go-version/gabrieldebem/array">
 <img src="https://shields.io/github/license/gabrieldebem/array">
