@@ -1,14 +1,14 @@
-package arrays_test
+package array_test
 
 import (
 	"testing"
 
-	"github.com/gabrieldebem/arrays"
+	"github.com/gabrieldebem/array"
 )
 
 func TestFilterWithInt(t *testing.T) {
 	numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
-	odd := arrays.Filter[int](numbers, func(n int) bool {
+	odd := array.Filter[int](numbers, func(n int) bool {
 		return n%2 == 0
 	})
 
@@ -19,7 +19,7 @@ func TestFilterWithInt(t *testing.T) {
 
 func TestFilterWithString(t *testing.T) {
 	words := []string{"gopher", "monkey", "robot", "ninja"}
-	filtered := arrays.Filter[string](words, func(s string) bool {
+	filtered := array.Filter[string](words, func(s string) bool {
 		return len(s) > 5
 	})
 
@@ -30,7 +30,7 @@ func TestFilterWithString(t *testing.T) {
 
 func TestMapWithInt(t *testing.T) {
 	numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
-	mapped := arrays.Map[int, int](numbers, func(n int) int {
+	mapped := array.Map[int, int](numbers, func(n int) int {
 		return n * 2
 	})
 
@@ -47,7 +47,7 @@ func TestMapWithInt(t *testing.T) {
 
 func TestMapceWithString(t *testing.T) {
 	words := []string{"gopher", "monkey", "robot", "ninja"}
-	mapped := arrays.Map[string, string](words, func(s string) string {
+	mapped := array.Map[string, string](words, func(s string) string {
 		return s + "!"
 	})
 
@@ -64,7 +64,7 @@ func TestMapceWithString(t *testing.T) {
 
 func TestReduceceWithInt(t *testing.T) {
 	numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
-	reduced := arrays.Reduce[int](numbers, func(a, b int) int {
+	reduced := array.Reduce[int](numbers, func(a, b int) int {
 		return a + b
 	})
 
@@ -75,7 +75,7 @@ func TestReduceceWithInt(t *testing.T) {
 
 func TestReduceceWithString(t *testing.T) {
 	words := []string{"gopher", "monkey", "robot", "ninja"}
-	reduced := arrays.Reduce[string](words, func(a, b string) string {
+	reduced := array.Reduce[string](words, func(a, b string) string {
 		return a + " " + b
 	})
 

@@ -1,3 +1,3 @@
-module github.com/gabrieldebem/arrays
+module github.com/gabrieldebem/array
 
 go 1.20

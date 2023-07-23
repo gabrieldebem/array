@@ -1,4 +1,4 @@
-package arrays
+package array
 
 func Map[T, U any](slice []T, f func(T) U) []U {
 	var result []U

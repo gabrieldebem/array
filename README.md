@@ -1,11 +1,11 @@
 ## Package of Basic Arrays Functions
 
-This package contains basic functions for arrays manipulation.
+This package contains basic functions for array manipulation.
 
 ## Installation
 
 ```bash
- go get github.com/gabrieldebem/arrays
+ go get github.com/gabrieldebem/array
 ```
 
 ## Usage
@@ -16,23 +16,23 @@ package main
 import (
     "fmt"
 
-    "github.com/gabrieldebem/arrays"
+    "github.com/gabrieldebem/array"
 )
 
 func main() {
     arr := []int{1,2,3,4}
 
-    fmt.Println(arrays.Filter[int](arr, func(i int) bool {
+    fmt.Println(array.Filter[int](arr, func(i int) bool {
         return i % 2 == 0
     }))
     // [2,4]
     
-    fmt.Println(arrays.Map[int, string](arr, func(i int) string {
+    fmt.Println(array.Map[int, string](arr, func(i int) string {
         return fmt.Sprintf("%d", i)
     }))
     // ["1","2","3","4"]
 
-    fmt.Println(arrays.Reduce[int](arr, 0, func(acc int, i int) int {
+    fmt.Println(array.Reduce[int](arr, 0, func(acc int, i int) int {
         return acc + i
     }))
     // 10
